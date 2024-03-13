@@ -3,6 +3,7 @@ import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import routes from "./routes";
 import AppError from "@shared/errors/AppError";
+import '@shared/typeorm';
 
 const app = express();
 
@@ -26,5 +27,5 @@ app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
 })
 
 app.listen(3333, () => {
-  console.log('Server started on port 3333');
+  console.log(':::Server started on port 3333::: 🏆');
 })
